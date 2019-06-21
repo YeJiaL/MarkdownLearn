@@ -69,3 +69,12 @@ git branch -a  所有分支（本地+远程）
 gitk --all
 
 git log remotes/origin/master --pretty=format:"%h - %an, %ar : %s"
+
+git如何清空所有的commit记录
+
+* git checkout --orphan  new_branch
+* git add -A
+* git commit -am "commit message"
+* git branch -D master
+* git branch -m master
+* git push -f origin master
