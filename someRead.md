@@ -2,6 +2,8 @@
 
 [TOC]
 
+
+
 ## Plan in 2018
 
 2018 input
@@ -115,7 +117,7 @@
  HttpLogBrowser是一个高级的，易于使用的程序，它提供了一个简单的方法来分析在IIS或Azure中托管的网站的W3C日志。
 - [ ] Network Emulator Toolkit  
     一款windows下的网络模拟器，可以模拟各种丢包或延迟的网络
-- [ ] ProcDump 
+- [ ] ProcDump
     介绍一个好用的抓取dump的工具-ProcDump
 - [ ] Process Hacker
     是一款功能丰富的系统程序。用户只要借助该程序就可以方便，快捷地查看相关进程的速度，内存，及模块等等，除此，还可以对相关的进程进行管理工作
@@ -151,3 +153,61 @@
 3. 复制公钥到github
 4. 测试一下该SSH key
     $ ssh -T git@github.com
+
+### Git配置多个SSH-Key
+
+解决方法
+
+1. 生成一个公司用的SSH-Key
+    > $ ssh-keygen -t rsa -C 'xxxxx@company.com' -f ~/.ssh/gitee_id_rsa
+2. 生成一个github用的SSH-Key
+    > $ ssh-keygen -t rsa -C 'xxxxx@qq.com' -f ~/.ssh/github_id_rsa
+3. 在 ~/.ssh 目录下新建一个config文件，添加如下内容（其中Host和HostName填写git服务器的域名，IdentityFile指定私钥的路径）  
+    ``` text
+    # gitee
+        Host gitee.com
+        HostName gitee.com
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/gitee_id_rsa
+    # github
+        Host github.com
+        HostName github.com
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/github_id_rsa
+    ```
+4. 用ssh命令分别测试
+    >ssh -T git@gitee.com
+    >ssh -T git@github.com
+
+### cordova short
+
+1. cordova create hello com.example.hello HelloWorld
+2. cd hello
+3. cordova platform add ios
+4. cordova platform add android
+5. cordova platform ls
+6. cordova platform remove android 
+    > cordova plugin add cordova-plugin-alipay-v2 --variable APP_ID=UIH.uiwebview 
+    > cordova plugin add cordova-plugin-wechat@2.1.0 --variable wechatappid=wx11111b316fbd1111
+    > cordova plugin remove cordova-plugin-alipay-v2
+    > cordova plugin list
+
+
+**bbbbbbbb**
+_iiiiiiii_
+~~ssss~~
+[www.baidu.com][baidu]
+``` text
+block
+```
+`dfasdfasdfasfasf`
+* bubu
+1. aaa
+2. dd
+- [ ] aa
+- [ ] bb
+> aaaa
+> fsafsadfasdf
+
+-----
+[baidu]:https://www.baidu.com/
