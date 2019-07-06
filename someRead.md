@@ -88,11 +88,12 @@
     麦客CRM是一款在线表单制作工具,同时也是强大的客户信息处理和关系管理系统
 - [ ] SpaceSniffer
     SpaceSniffer 是 Windows 上一款以块状树平铺直观展现磁盘空间占用情况的软件，使用简单，功能直击痛点，而且软件本体甚至不足 1 MB
-- [ ] total commander
-    功能强大的全能文件管理器，同步文件夹
+- [ ] total commander 功能强大的全能文件管理器，同步文件夹
 - [ ] 方方格子Excel插件（www.ffcell.com/）
 - [ ] iSlide（www.islide.cc） ppt插件
 - [ ] FineReport (www.finereport.com)——做表专业户必备
+- [ ] FastStoneCapturecn 截图
+- [ ] Snipaste 截图
 
 ### Chrome插件
 

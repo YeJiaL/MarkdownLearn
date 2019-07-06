@@ -51,7 +51,7 @@ Observable observable = Observable.create(new ObservableOnSubscribe<Integer>() {
 
 
 Observer Pattern
-
+http://reactivex.io/documentation/operators.html
 ### Operation 
 
 #### create
@@ -72,3 +72,5 @@ cast
 flatMapIterable
 buffer
 groupBy
+
+

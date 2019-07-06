@@ -55,7 +55,7 @@ if (exist){
 
 ### C#中List〈string〉和string[]数组之间的相互转换
 
-```c#
+```c#  {.line-numbers}
 // 1.从System.String[]转到List<System.String>
 System.String[] str={"str","string","abc"};
 List<System.String> listS=new List<System.String>(str);
@@ -72,11 +72,11 @@ System.String[] str=listS.ToArray();
 git branch git testing
 123
 
-```js
-1<script src ="~/Areas/Clt/Scripts/Report/reportRecordVue.js"></ script>
-2 <script type ="text/javascript">
-3var report = @ Html.Raw(ViewData["report" ]);
-4 </script >即234行先执行，当中的Report变量可用
+```js  {.line-numbers}
+<script src ="~/Areas/Clt/Scripts/Report/reportRecordVue.js"></ script>
+<script type ="text/javascript">
+var report = @ Html.Raw(ViewData["report" ]);
+</script >即234行先执行，当中的Report变量可用
 
 当不适用layout的时候，
 @{
