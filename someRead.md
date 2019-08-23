@@ -104,6 +104,7 @@
 - [ ] vimium http://pan.baidu.com/s/1jHVOO0A
 - [ ] 印象笔记 http://pan.baidu.com/s/1miDehTI
 - [ ] 马克飞象
+- [ ] tampermonkey  俗称“油猴子”
 
 ### 软件开发
 
@@ -211,4 +212,10 @@ block
 > fsafsadfasdf
 
 -----
+
 [baidu]:https://www.baidu.com/
+
+
+金字塔原理.pdf
+https://www.zhihu.com/question/1959468
+[你极力推荐的 Chrome 扩展有哪些？](https://www.zhihu.com/question/19594682)
