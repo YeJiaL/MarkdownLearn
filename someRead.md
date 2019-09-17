@@ -181,6 +181,55 @@
     >ssh -T git@gitee.com
     >ssh -T git@github.com
 
+
+###实操（验证通过）
+####验证
+ssh -T git@github.com
+ssh -T git@monkey.united-imaging.com
+####查看配置
+$ git config --list
+$ git config --global user.name "你的名字"
+$ git config --global user.email  "你的邮箱"
+必须删除该设置
+$ git config --global --unset user.name "你的名字"
+$ git config --global --unset user.email "你的邮箱"
+————————————————
+####生成私密
+ssh-keygen -t rsa -C 'xxx@united-imaging.com' -f ~/.ssh/id_rsa_gitlab
+ssh-agent bash
+ssh-add id_rsa
+ssh-add id_rsa_gitlab
+
+ `# 该文件用于配置私钥对应的服务器`
+ `# first user`
+ Host github.com
+ HostName github.com
+ User xxxx@qq.com
+ IdentityFile ~/.ssh/id_rsa
+ 
+ `# second user`
+ Host xxxx.united-imaging.com
+ HostName xxxx.united-imaging.com
+ User xxx@united-imaging.com
+ IdentityFile ~/.ssh/id_rsa_gitlab
+————————————————
+版权声明：本文为CSDN博主「长是人千离」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/qq_30227429/article/details/80229167
+
+####配置文件
+ # 该文件用于配置私钥对应的服务器
+ # first user
+ Host git@github.com
+ HostName https://github.com
+ User xxx@qq.com
+ IdentityFile ~/.ssh/id_rsa
+ 
+ # second user
+ Host git@xxxxx.united-imaging.com
+ HostName http://xxxxxx.united-imaging.com
+ User xxxx@united-imaging.com
+ IdentityFile ~/.ssh/id_rsa_gitlab
+
 ### cordova short
 
 1. cordova create hello com.example.hello HelloWorld
